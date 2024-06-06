@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradient-icon {
+    background: linear-gradient(to right, #4f46e5, #6366f1); /* Replace with your desired gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+}
+
+.animation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #a855f7, #fca5a5);
+  animation: changeGradient 20s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes changeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.active {
+  background: linear-gradient(45deg, #a855f7, #fca5a5,#a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
